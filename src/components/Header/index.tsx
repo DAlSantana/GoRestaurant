@@ -1,16 +1,14 @@
-import { Component } from 'react';
 import { FiPlusSquare } from 'react-icons/fi';
 
-import { Container } from './styles';
+import { Container,HeaderStyled } from "./styles";
 import Logo from '../../assets/logo.svg';
 
-class Header extends Component {
-  render() {
-    const { openModal } = this.props;
+export function Header(props:any){
+  const { openModal } = props;
 
     return (
       <Container>
-        <header>
+        <HeaderStyled>
           <img src={Logo} alt="GoRestaurant" />
           <nav>
             <div>
@@ -25,10 +23,10 @@ class Header extends Component {
               </button>
             </div>
           </nav>
-        </header>
+        </HeaderStyled>
       </Container>
     )
-  }
+  
 };
 
-export default Header;
+
